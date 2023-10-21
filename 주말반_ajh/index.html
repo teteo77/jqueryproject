@@ -1,173 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      header {
-        position: relative;
-        height: 500px;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(100%);
-          /* transform: translateX(100%); */
-          /* transform: translate(100%, 100%); */
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .header-left {
-        display: flex;
-        flex-direction: column;
-        /* Added margin for spacing */
-        float: left;
-      }
-
-      .test_obj {
-        position: relative;
-        opacity: 0; /* 초기에 숨기기 */
-        animation: fadeInUp 1s forwards; /* forwards를 사용하여 애니메이션 종료 시 상태 유지 */
-        animation-delay: 0.5s; /* 원하는 딜레이 값으로 수정 */
-        font-size: 100px;
-        padding-bottom: 0px;
-        font-weight: bold;
-      }
-
-      .test_obj2 {
-        position: relative;
-        opacity: 0; /* 초기에 숨기기 */
-        animation: fadeInUp 1s forwards; /* forwards를 사용하여 애니메이션 종료 시 상태 유지 */
-        animation-delay: 1.5s; /* 원하는 딜레이 값으로 수정 */
-        font-size: 71px;
-        font-weight: bold;
-      }
-
-      .header-middle {
-        position: absolute;
-        right: 600px;
-        top: 150px;
-      }
-
-      .image2 {
-        background-image: url("./image/image2.png");
-        width: 300px;
-        height: 100px;
-        background-repeat: no-repeat;
-        padding-top: 15px;
-        padding-left: 0px;
-      }
-
-      .header-right {
-        position: absolute;
-        right: 240px;
-        top: 50px;
-      }
-
-      @keyframes fadeInUp2 {
-        from {
-          opacity: 0;
-          /* transform: translateY(30%); */
-          /* transform: translateX(100%); */
-          /* transform: translate(100%, 100%); */
-        }
-        to {
-          opacity: 1;
-          /* transform: translateY(0); */
-        }
-      }
-      .image {
-        background-image: url("./image/image1.jpg");
-        background-repeat: no-repeat;
-        width: 250px;
-        height: 400px;
-        background-size: 100%;
-        /* background-size: cover; */
-        opacity: 0; /* 초기에 숨기기 */
-        animation: fadeInUp2 1.7s forwards; /* forwards를 사용하여 애니메이션 종료 시 상태 유지 */
-        animation-delay: 2.2s; /* 원하는 딜레이 값으로 수정 */
-      }
-
-      main {
-        position: relative;
-      }
-
-      @keyframes fadeInUp3 {
-        from {
-          opacity: 0;
-          /* transform: translateY(30%); */
-          /* transform: translateX(100%); */
-          /* transform: translate(100%, 100%); */
-        }
-        to {
-          opacity: 1;
-          /* transform: translateY(0); */
-        }
-      }
-
-      @keyframes fadeInUp4 {
-        from {
-          opacity: 1;
-          /* transform: translateY(30%); */
-          /* transform: translateX(100%); */
-          /* transform: translate(100%, 100%); */
-        }
-        to {
-          opacity: 0;
-          /* transform: translateY(0); */
-        }
-      }
-      .main-wrap{
-        width: 100%;
-        height: 500px;
-        border: 1px solid gold;
-        background-color: brown;
-        /* animation: fadeInUp3 1s forwards; */
-        opacity: 0;
-      }
-    </style>
-  </head>
-  <body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 홈페이지</title>
+</head>
+<body>
     <header>
-      <div class="header-left">
-        <div class="test_obj">하나하나 정확히</div>
-        <div class="test_obj2">느리지만 천천히</div>
-      </div>
-      <div class="header-middle">
-        <div class="image2">
-          html css fornt-end 퍼블리셔 등 짧게 쓰기 3줄정도? 인사는 about
-          부분에서하기
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="image"></div>
-      </div>
+    <h1><a href="#">안지혁 포트폴리오 사이트</a></h1>
+    <h2>메인서비스</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button>메뉴</button>
+    <h2>INTRO</h2>
+    <p>AN JEE HYOCK</p>
+    <p><br>안녕하세요! 노력하는<br>
+    열정적인<br>
+    재치있는<br>
+    성장하는<br>
+    함께하는<br>
+    능력있는<br>
+    트렌디한<br>
+    센스있는<br>
+    노력하는 웹개발자 안지혁입니다.<br>
+    </p>
     </header>
     <main>
-      <div class="main-wrap">안에 있는 부분 전체적으로 일정 스크롤 내려오면 서서히 나타나게 하기</main>
-    </main>
-    <footer></footer>
-    <script>
-      let main_wrap = document.querySelector(".main-wrap");
+    <section>
+        <h2>ABOUT</h2>
+        <img src="image/image3.jpg" alt="자기소개 사진">
+        <p>1996.01.31 안지혁</p>
+        <p>트렌디한, 세련된, 성장하는</p>
+        <p>저를 표현하는 세가지 수식어입니다.
+            저는 트렌드의 흐름을 읽고, 웹표준에 맞는 마크업과 세련된 인터렉션을 구현하며 꾸준히 성장하는 웹개발자가 되고자 합니다.</p>
+        <h3>History</h3>
+        <ul>
+            <li>1996 출생</li>
+            <li>경일대학교 휴학</li>
+            <li>대한민국 육군 병장 보안병 만기전역</li>
+            <li>HTML/CSS/JS 입문</li>
+            <li>React 입문</li>
+            <li>2023 Jquery 반응형웹 사이트 NCS과정 수료</li>
+        </ul>
+        <h4>Skill</h4>
+        <ul>
+            <li>HTML: 90%</li>
+            <li>CSS: 80%</li>
+            <li>JAVASCRIPT: 80%</li>
+            <li>REACT: 50%</li>
+        </ul>
+    </section>
+    <section>
+        <h2>PORTFOLIO</h2>
+        <h3>작품</h3>
+        <ul>
+            <li src="#" alt="Web 포트폴리오 이미지1"></li>
+            <li src="#" alt="Web 포트폴리오 이미지2"></li>
+            <li src="#" alt="Web 포트폴리오 이미지3"></li>
+            <li src="#" alt="Web 포트폴리오 이미지4"></li>
+            <li src="#" alt="Web 포트폴리오 이미지5"></li>
+            <li src="#" alt="Web 포트폴리오 이미지6"></li>
+        </ul>
 
-      window.addEventListener("scroll", function(){
-        let value= window.scrollY;
-        console.log("scrollY:", value);
-        
-        if(value > 30){
-          main_wrap.style.animation="fadeInUp3 1s forwards"
-        }else{
-          main_wrap.style.animation="fadeInUp4 1s forwards"
-        }
+        <h6>CONTACTS</h6>
+        <div>
+            <p>
+                <span>ADDRESS</span>
+                Republic of Korea, Seoul
+            </p>
+            <p>
+                <span>EMAIL</span>
+                teteocom@naver.com
+            </p>
+            <p>
+                <span>Thank you for visit</span>
+                제 포트폴리오를 봐주셔서 감사합니다
+            </p>
+        </div>
+        <form>
+            <fieldset>
+                <legend>이메일 보내기</legend>
+                성명 <textarea type="text" placeholder="your name"></textarea>
+                이메일 주소 <textarea type="text" placeholder="your email"></textarea>
+                내용 <textarea type="text" placeholder="yout message">*5자 이상 입력해주세요!<button>SEND MESSAGE</button></textarea>
+            </fieldset>
+        </form>
+        <p>이메일 전송이 완료되었습니다.<br>
+        빠른 시일내로 답변 드리겠습니다.</p>>
 
-      })
-      
-
-    </script>
-  </body>
+    </section>
+    <footer>
+        <p>Copyright &copy;2023 AJH. ALL rights reserved.</p>
+    </footer>
+</main>
+</body>
 </html>
