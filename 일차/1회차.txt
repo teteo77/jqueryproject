@@ -12,6 +12,11 @@ https://discord.gg/sSMn4Fsf
 - 교육커리큘럼/일정 안내 :
 http://ctrlcv.kr/dj04/
 
+http://ctrlcv.kr/sample/
+
+수업 파일
+	ㄴ http://ctrlcv.kr/dj04/html/
+
 
 
 
@@ -133,15 +138,15 @@ UI는 그냥 디자인
 			ㄴ 검은색 원안에 마우스가 따라오는걸 자기소개 포폴에 넣고싶다.
 	ㄴ http://kdesign.kr/#
 		ㄴ 실제 사진이 아닌 이미지로 표현하는 사진이 마음에 든다
-	ㄴ http://hibeeny.com/
-		ㄴ 일잘하는 퍼블리셔 부분에 입력하는 듯이 쓰는 디자인이 마음에 든다
-		ㄴ 저는 이런 사람입니다 하고 밑에 기술 퍼센티지 오는게 마음에 든다
 
 	ㄴ http://0bin.space/
 		ㄴ 모작이 마음에 든다.
 
+	ㄴ http://hibeeny.com/
+		ㄴ 자기소개, 기술 숙련도 표현 부분이 마음에 든다.	
+
 	ㄴ http://hesiily.com/
-		ㄴ 포토폴리오 Web 표현 방식이 마음에 든다
+		ㄴ 포토폴리오 자기소개, 기술숙련도 부분이 마음에 든다
 
 포폴 사이트니까 자기 소개 페이지 구상하면 됨
 

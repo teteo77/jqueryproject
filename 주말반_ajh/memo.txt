@@ -1,1 +1,22 @@
+
+
+03-원본.html
+    ㄴ placeholder에만 디자인 따로주기
+    ㄴ form입력 했을때 활성화 된 느낌 주기 class="#content .inputform:focus{border:#000}"
+    ㄴ margin:0 0 0 auto;
+        ㄴ이게 왜 오른쪽 정렬이 되지?
+    ㄴ 선생님도 중앙정렬 할때 padding:30px 0; text-align:center; 주더라
+        ㄴ footer만 그랬던거 같은데 나머지 부분은?
+    
+
+03-02.html
+    ㄴ title이 존재하면 보이게 안존제 하면 안보이게 하는 부분 놓침
+
+span > .on
+    ㄴ span다음에 on이라는 클레스가 있는가
+span .on
+    ㄴ 자손중에 on이라는 클레스
+span.on
+    ㄴ 스팬 자체에 경로
+
 web developer확장 프로그램 활용
