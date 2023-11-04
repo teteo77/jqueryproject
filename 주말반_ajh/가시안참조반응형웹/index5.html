@@ -95,8 +95,62 @@
         font-size:30px;
       }
 
-      #HOME img{
-        width:40%;
+      #HOME #header_img{
+        border:1px solid peru;
+        margin-left:150px;
+        position: relative;
+      }
+
+      #HOME #header_img div:nth-child(1){
+        width: 600px;
+        height: 500px;
+        background-image: url("./image/header1.png");
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+      @keyframes rotate_animation {
+        0% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+    }
+
+      #HOME #header_img div:nth-child(2){
+        width:70px;
+        height:62px;
+    left: 70%;
+    top: 78%;
+        background-image: url("./image/header2.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: rotate_animation 3s ease infinite;
+      }
+
+      @keyframes loop_animation{
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+      }
+
+
+      #HOME #header_img div:nth-child(3){
+        width:70px;
+        height:62px;
+        background-image: url("./image/header3.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: loop_animation 3s ease infinite;;
       }
       
       #HOME > article > p {
@@ -121,18 +175,22 @@
         max-width: 1920px;
         height: 1050px;
         border: 1px solid #f6eace;
-        margin: auto;
+        margin: 100px auto 10px;
         width: fit-content;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
       }
 
+      #about h2{
+        width: 1820px;
+      }
+
       #about #about_article {
         width: 1500px;
         height: 33%;
-        /* margin: auto; */
-        margin-bottom: 200px;
+        margin: 150px auto 300px;
+        /* margin-bottom: 200px; */
         width: fit-content;
       }
 
@@ -292,14 +350,16 @@
           </nav>
           <p>웹개발자 안지혁 입니다.</p>
         </article>
-        <article>
-          <img src="./image/image1.png" alt="헤더 메인 그림" />
+        <article id="header_img">
+          <div></div>
+          <div></div>
+          <div></div>
 
         </article>
       </section>
       <section id="about">
+        <h2>ABOUT</h2>
         <article id="about_article">
-          <h2>ABOUT</h2>
           <hr />
           <img src="./image/image3.png" alt="자기소개 사진" />
           <p>1996.01.31 안지혁</p>

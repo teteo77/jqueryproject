@@ -66,15 +66,30 @@
         font-size: 25px;
         
 
+        /* 메뉴바는 vh로 
+vw는 현제 보고있는 페이지에 %트이다
+vh는 viewporot height이다 방문자 페이지를 %만큼 채워라 이다. */
+
+/* header에다가 postion:fixed주기 
+  ㄴ z-index */
+
+
+
+/* HOME이 첫 화면에 가득차게 해주기 */
+
+/* about세션에서 내용이 넘처서 스크롤 바가 나옴
+  ㄴ 내용 넘치는거 어떻게 캐치함? */
       }
       #HOME {
         border: 1px solid orange;
-        max-width: 1920px;
-        height: 700px;
+        max-width: 1200px;
+        height: 100vh;
         margin: auto;
         display: flex;
         /* width: fit-content; */
-        width:90%;
+        /* width:90%; */
+        align-items: center;
+        position: relative;
       }
       /* width: fit-content로 컨텐츠 크기만큼 width를 주고 있기 때문에
       padding이나 maregin으로 넓이 줘도 되고
@@ -82,9 +97,9 @@
 
       #HOME #intro {
         border: 1px solid grey;
-        width:45%;
-        height:187px;
-        margin: auto 0px;
+        width:fit-content;
+        /* height:187px;
+        margin: auto 0px; */
       }
 
       #HOME .swiper {
@@ -95,20 +110,114 @@
         font-size:30px;
       }
 
-      #HOME img{
-        width:40%;
+      /* center/contain no-repeat;이게뭐지 
+          ㄴ 이거 정리하기*/
+      #HOME #header_img{
+      width: 600px;
+      height: 480px;
+      border: 1px solid peru;
+      position: absolute;
+      right: 0;
+      max-height: 750px;
+      background: url(./image/header1.png) center/contain no-repeat;
+      
+      z-index: -1;
+      }
+
+      @keyframes rotate_animation {
+        0% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+    }
+
+      #HOME #header_img div:nth-child(1){
+        width:70px;
+        height:62px;
+        left: 70%;
+        top: 78%;
+        background-image: url("./image/header2.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: rotate_animation 3s ease infinite;
+      }
+
+      @keyframes loop_animation{
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+      }
+
+
+      #HOME #header_img div:nth-child(2){
+        width:70px;
+        height:62px;
+        left: 44%;
+        top: 34%;
+        background-image: url("./image/header3.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: loop_animation 3s ease infinite;
+
+      }
+
+      @keyframes loop_animation2{
+        0% {
+            transform: translateY(5px);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(5px);
+        }
+      }
+      #HOME #header_img div:nth-child(3){
+        width:70px;
+        height:62px;
+        left: 51%;
+        top: 18%;
+        background-image: url("./image/header4.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: loop_animation2 6s .5s ease infinite;
+      }
+
+
+
+      #HOME #header_img div:nth-child(4){
+        width:11%;
+        height:13%;
+        left: 27%;
+        top: 10%;
+        background-image: url("./image/header5.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: loop_animation 2.5s ease infinite;
       }
       
       #HOME > article > p {
         font-size: 25px;
         font-weight: bold;
-        width: 320px;
+        /* width: 320px; */
         /* margin: auto; */
       }
 
       #HOME > article > p:nth-child(4) {
-        width:600px;
+        /* width:600px; */
         font-size:30px;
+        white-space: nowrap;
 
       }
 
@@ -121,18 +230,22 @@
         max-width: 1920px;
         height: 1050px;
         border: 1px solid #f6eace;
-        margin: auto;
+        margin: 100px auto 10px;
         width: fit-content;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
       }
 
+      #about h2{
+        width: 1820px;
+      }
+
       #about #about_article {
         width: 1500px;
         height: 33%;
-        /* margin: auto; */
-        margin-bottom: 200px;
+        margin: 150px auto 300px;
+        /* margin-bottom: 200px; */
         width: fit-content;
       }
 
@@ -143,7 +256,6 @@
         margin-right: 50px;
       }
       /* float:left를 써도돼나? 다른거 또 뭐있지? */
-      /* 정답이 없는데 왜자꾸 정답을 찾아 */
 
       #about #about_article section {
         width: 900px;
@@ -216,14 +328,7 @@
 
       #portfolio #portfolio_contacts form{
         width:50%;
-
       }
-
-      
-
-
-
-
 
       footer {
         background: #333;
@@ -279,7 +384,7 @@
             <span>PORTFOLIO</span>
           </p>
           <p>안녕하세요!</p>
-          <nav class="swiper">
+          <div class="swiper">
             <!-- Additional required wrapper -->
             <ul class="swiper-wrapper">
               <!-- Slides --> 
@@ -289,17 +394,20 @@
               <li class="swiper-slide">산류천석</li>
               <li class="swiper-slide">유지경석</li>
             </ul>
-          </nav>
+          </div>
           <p>웹개발자 안지혁 입니다.</p>
         </article>
-        <article>
-          <img src="./image/image1.png" alt="헤더 메인 그림" />
+        <article id="header_img">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
 
         </article>
       </section>
       <section id="about">
+        <h2>ABOUT</h2>
         <article id="about_article">
-          <h2>ABOUT</h2>
           <hr />
           <img src="./image/image3.png" alt="자기소개 사진" />
           <p>1996.01.31 안지혁</p>
