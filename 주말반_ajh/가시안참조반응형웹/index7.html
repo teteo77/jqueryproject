@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오 홈페이지</title>
     <style>
+      :root {
+        --Black1: #141414;
+        --Grey1: #f8f8f8;
+        --Grey2: #cacaca;
+        --Grey3: #606060;
+        --Grey4: #b8c8d1;
+        --Grey5: #a9b2b7;
+        --Blue1: #3bc3ff;
+        --Blue2: #d4e9f8;
+        --Blue3: #f5f9fa;
+        --Blue4: #b9e0f3;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -221,10 +233,10 @@
       #about {
         border: 1px solid #f6eace;
         /* max-width: 1920px; */
-        width: 100%;
+        /* width: 100%; */
         /* margin: 100px auto 10px; */
         margin: auto;
-
+        /* padding: 100px; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -240,7 +252,7 @@
       #about h2 {
         border-bottom: 2px solid black;
         padding-bottom: 5px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 59px;
         font-size: 36px;
       }
@@ -261,6 +273,9 @@
 
       #about #about_hs {
         display: flex;
+        /* width: 100%; */
+        justify-content: space-around;
+        /* gap: 150px; */
       }
 
       #about #about_hs h3 {
@@ -273,11 +288,13 @@
 
       #about #about_hs #history,
       #skill {
-        margin: auto;
-        width: fit-content;
+        /* display: flex; */
+        /* margin: auto; */
+        /* width: fit-content; */
+        width: 40%;
       }
 
-      #about #about_hs section ul:nth-child(2) {
+      #about #about_hs #history ul:nth-child(2) {
         margin-left: 50px;
       }
 
@@ -289,16 +306,28 @@
         font-size: 25px;
       }
 
-      #about #about_hs section ul:nth-child(4) {
+      #about #about_hs #skill ul:nth-child(4) {
         margin-left: 50px;
       }
 
       #portfolio {
         border: 1px solid #e6e6fa;
-        max-width: 1920px;
-        height: 1000px;
-        width: fit-content;
+        max-width: 100%;
+        /* width: fit-content; */
+        height: 100%;
+        padding: 100px;
         margin: auto;
+        margin-bottom: 250px;
+      }
+
+      /* #portfolio_wrap {
+        border: 1px solid black;
+        padding: 100px;
+      } */
+      #portfolio h2 {
+        border-bottom: 2px solid black;
+        padding-bottom: 5px;
+        font-size: 36px;
       }
 
       #portfolio h3 {
@@ -317,12 +346,13 @@
       } */
 
       #portfolio #portfolio_contacts {
-        width: fit-content;
+        background: var(--Grey1);
+        width: 100%;
         margin: auto;
-        padding: 100px;
-
+        /* padding: 100px; */
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
       }
 
       #portfolio #portfolio_contacts #contacts {
@@ -337,10 +367,6 @@
         border: 1px solid black;
         text-align: center;
         height: 50px;
-      }
-
-      #portfolio #portfolio_contacts form {
-        width: 50%;
       }
 
       #portfolio #portfolio_contacts h2 {
@@ -361,7 +387,7 @@
       }
 
       #portfolio #portfolio_contacts span {
-        /* color: var(--Black1); */
+        color: var(--Black1);
         display: block;
         font-size: 24px;
         font-weight: 500;
@@ -369,8 +395,18 @@
       }
 
       #portfolio #portfolio_contacts form {
+        text-align: center;
+        /* width: 50%; */
+      }
+
+      #portfolio #portfolio_contacts fieldset {
         padding: 50px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        /* height: 100%; */
+        /* outline: none;
+        border: none; */
       }
 
       footer {
@@ -490,7 +526,6 @@
       </section>
       <section id="portfolio">
         <h2>PORTFOLIO</h2>
-        <hr />
         <!-- 작품 부분 수정 -->
         <!-- 슬라이드 기능을 넣어서 보기 이미지로 구성 하려면 -->
         <!-- 이미지 3장을 넣어서 표현하자 -->
@@ -505,7 +540,8 @@
         </article>
 
         <article id="portfolio_contacts">
-          <section id="contacts">
+          <!-- <section id="portfolio_wrap"> -->
+          <article id="contacts">
             <h2>CONTACTS</h2>
             <!-- height, border가 적용이 안되는데 이유를 모르겠음 -->
             <p>
@@ -520,7 +556,7 @@
               <span>Thank you for visit</span>
               제 포트폴리오를 봐주셔서 감사합니다
             </p>
-          </section>
+          </article>
           <form>
             <fieldset>
               <legend>이메일 보내기</legend>
@@ -533,6 +569,7 @@
               >
             </fieldset>
           </form>
+          <!-- </section> -->
         </article>
       </section>
       <footer>
